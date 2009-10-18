@@ -7,8 +7,39 @@
 	diff = auto
 	status = auto
 	branch = auto
-[core]
-	excludesfile = <%= ENV['HOME'] %>/.gitignore
-	editor = mate -w
+	interactive = auto
+[color "branch"]
+	current = yellow reverse
+        local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[github]
+	user = <%= print("GitHub User: "); STDOUT.flush; STDIN.gets.chomp %>
+	token = <%= print("GitHub Token: "); STDOUT.flush; STDIN.gets.chomp %>
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	me = merge
+	df = !git diff | vim -
+	publish = !git co master && git pull && git co dev && git rebase master && git co master && git me dev && git wtf
+	br = branch
+	lg = log -p
+	rb = rebase
+	spull = !git-svn fetch && git-svn rebase -i
+	spush = !git-svn dcommit
 [apply]
 	whitespace = nowarn
+[branch]
+	autosetupmerge = true
+[core]
+	excludesfile = <%= ENV['HOME'] %>/.gitignore
+	editor = vim
