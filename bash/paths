@@ -1,25 +1,2 @@
-# Defaults
-PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-MANPATH="/usr/local/man:$MANPATH"
-
-[ -x ~/bin ] && PATH="~/bin:$PATH"
-[ -x ~/man ] && MANPATH="~/man:$MANPATH"
-
-# Adding MySQL server paths
-if [ -x /usr/local/mysql ]; then
-  PATH="/usr/local/mysql/bin:$PATH"
-  MANPATH="/usr/local/mysql/man:$MANPATH"
-fi
-
-# Adding Git rvs paths
-if [ -x /usr/local/git/bin ]; then
-  PATH="/usr/local/git/bin:$PATH"
-  MANPATH="
-fi
-
-# Misc
-# RVM Paths - FIXME: Need to dynamicly adjust this to the working version
-[ -x ~/.gem/ruby/1.8/bin ] && PATH="~/.gem/ruby/1.8/bin:$PATH"
-
-# Exporting Environment
-export MANPATH PATH
+export PATH="~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
+export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"

@@ -13,4 +13,3 @@ function railsapp {
 
 # misc
 alias reload='. ~/.bash_profile'
-type -f surfraw && alias google='surfraw google'
