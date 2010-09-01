@@ -1,2 +1,2 @@
 # go to saved path if there is one
-[ -f ~/.current_path~ ] && cd `cat ~/.current_path~` && rm ~/.current_path~
+#[ -f ~/.current_path~ ] && cd `cat ~/.current_path~` && rm ~/.current_path~

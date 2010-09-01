@@ -1,12 +1,12 @@
 #!/usr/bin/env ruby
 
-class ProjectCompletion
+class HomeCompletion
   def initialize(command)
     @command = command
   end
   
   def matches
-    projects.select do |task|
+    folders.select do |task|
       task[0, typed.length] == typed
     end
   end
@@ -15,8 +15,8 @@ class ProjectCompletion
     @command[/\s(.+?)$/, 1] || ''
   end
   
-  def projects
-    `ls ~/Workspace/`.split
+  def folders
+    `ls ~/`.split
   end
 end
 

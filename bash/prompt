@@ -1,1 +1,1 @@
-export PROMPT_COMMAND="pwd > ~/.current_path~"
+#export PROMPT_COMMAND="pwd > ~/.current_path~"

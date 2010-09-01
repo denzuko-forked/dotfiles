@@ -1,2 +1,16 @@
-export PATH="~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
-export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
+# Defaults
+add_paths /usr/local
+export PATH="/usr/local/sbin:$PATH"
+
+# Adding MySQL paths
+add_paths /usr/local/mysql
+
+# Adding Git RVS paths
+add_paths /usr/local/git
+
+# Adding RVM and ruby gems paths
+add_paths $HOME/.rvm
+add_paths $HOME/.gem/1.8
+
+# Misc
+add_paths $HOME

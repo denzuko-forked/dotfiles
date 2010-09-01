@@ -14,8 +14,8 @@ be based off my LSB and POSIX compient scripts.
 
 == Environment
 
-This is configured to on Linux, Mac OS X and MinGW, retrospectivelly.
-With minor fiddling, *BSD will work. Both z/korn and bourne agian shells are 
+This is configured to run on Linux, Mac OS X and MinGW, retrospectivelly.
+With minor fiddling, *BSD will work. Both z/korn and bourne again shells are 
 supported. If you would like to switch to zsh, you can do so with 
 the following command.
 
@@ -24,10 +24,10 @@ the following command.
 
 == Features
 
-I normally place all of my coding projects in ~/code, so this directory 
-can easily be accessed (and tab completed) with the "c" command.
+I normally place all of my projects in ~/Workspace/Projects, so this directory 
+can easily be accessed (and tab completed) with the "workspace" command.
 
-  c railsca<tab>
+  workspace Projects/railsapp<tab>
 
 There is also an "h" command which behaves similar, but acts on the 
 home path.
@@ -51,6 +51,9 @@ Mac OS X Terminal.
 
 If you're using git, you'll notice the current branch name shows up in
 the prompt while in a git repository.
+
+I have also added support for a darn sweet tool known as keytool(1) and 
+for localized manpages and bin folders.
 
 If you're using Rails, you'll find some handy aliases (below). You can 
 also use show_log and hide_log in script/console to show the log inline.

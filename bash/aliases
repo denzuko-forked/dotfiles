@@ -1,15 +1,26 @@
 . ~/.zsh/aliases
 
 # changing directory to code project
-function c { cd ~/code/$1; }
+function workspace { cd ~/Workspace/$1; }
+
+function h { cd ~/$1; }
 
 # alternative to "rails" command to use templates
 function railsapp {
+  template_url="http://github.com/denzuko/rails-templates/raw/master"
   template=$1
   appname=$2
   shift 2
-  rails $appname -m http://github.com/ryanb/rails-templates/raw/master/$template.rb $@
+
+  rails ${appname} -m "${template_url}/${template}.rb" $@
+}
+
+# reduce repeate code for setting up the environment
+function add_paths {
+  [ -x $1 ] && PATH="${1}/bin:$PATH" && MANPATH="${1}/man:$PATH"
+  export PATH MANPATH
 }
 
 # misc
 alias reload='. ~/.bash_profile'
+type -t surfraw >&2 2>/dev/null && alias google='surfraw google'

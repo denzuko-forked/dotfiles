@@ -1,2 +1,5 @@
-export PS1="[\h:\w \u]\$ "
-export EDITOR="vim"
+PS1="\w% "
+EDITOR="vim"
+VISUAL="vim"
+
+export PS1 EDITOR VISUAL

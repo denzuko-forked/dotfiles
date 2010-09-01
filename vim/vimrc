@@ -1,0 +1,31 @@
+"filetype on
+filetype plugin on
+
+set nocompatible
+set viminfo^=!
+set cindent
+set cinoptions=:0,p0,t0
+set cinwords=if,else,while,do,for,switch,case
+set autowrite
+set autoindent
+set smarttab
+set expandtab
+set cf
+set clipboard+=unnamed
+set history=140
+set autowrite
+set sts=2
+set si
+set spell
+set bs=2
+set nocp incsearch
+set showmatch
+set list
+set showmatch
+set mat=5
+set formatoptions=tcqr
+set nowrap
+map <silent> <m-p> :cp <cr>
+map <silent> <m-n> :cn <cr>
+
+syntax enable
