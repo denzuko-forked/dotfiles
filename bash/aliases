@@ -17,10 +17,10 @@ function railsapp {
 
 # reduce repeate code for setting up the environment
 function add_paths {
-  [ -x $1 ] && PATH="${1}/bin:$PATH" && MANPATH="${1}/man:$PATH"
+  [ -x $1 ] && PATH="${1}/bin:$PATH" && MANPATH="${1}/man:$MANPATH"
   export PATH MANPATH
 }
 
 # misc
 alias reload='. ~/.bash_profile'
-type -t surfraw >&2 2>/dev/null && alias google='surfraw google'
+type -t surfraw 2>&1 1>/dev/null && alias google='surfraw google'
